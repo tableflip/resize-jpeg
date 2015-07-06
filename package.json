@@ -2,9 +2,12 @@
   "name": "resize-jpeg",
   "version": "0.1.0",
   "description": "Resize your jpeg; preserve its quality",
-  "main": "resize-jpeg.js",
+  "main": "index.js",
+  "bin":{
+    "resize-jpeg": "cli.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard && node test/test.js"
   },
   "repository": {
     "type": "git",

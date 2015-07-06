@@ -13,7 +13,7 @@ resize-jpeg -w 800 original.jpg > original.w800.jpg
 That's surprising. [`mozjpeg`](https://npm.io/mozjpeg) does a better job of optimising pixels for your eyes, and every byte counts, so instead:
 
 ```sh
-resize-jpeg -minify -w 800 original.jpg > original.w800.min.jpg
+resize-jpeg --minify -w 800 original.jpg > original.w800.min.jpg
 ```
 
 That'll generally give a better output jpeg for fewer bytes. Win win!
@@ -29,7 +29,7 @@ npm install -g resize-jpeg
 resize-jpeg -w 800 path/to/my/picture
 ```
 where `-w` is the new **width** you'd like proportionally scale the image to.
-Add a `-minify` in there to engage mozjpeg minification magic.
+Add a `--minify` in there to engage mozjpeg minification magic.
 
 ## Use it as a module!
 
