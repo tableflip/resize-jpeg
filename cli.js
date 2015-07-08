@@ -11,7 +11,7 @@ var argv = require('minimist')(process.argv.slice(2))
 
 var width = parseInt(argv.w, 10)
 var source = argv._[0] === '-' ? process.stdin : fs.createReadStream(argv._[0])
-var resize = argv.minify ? pumpify(resizeJpeg(width), mozjpeg()) : resizeJpeg(width)
+var resize = (argv.minify || argv.m) ? pumpify(resizeJpeg(width), mozjpeg()) : resizeJpeg(width)
 
 source
   .pipe(resize)

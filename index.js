@@ -5,7 +5,7 @@ var dcp = require('duplex-child-process')
 var args = 'convert -size %s - -resize %s -define jpeg:preserve-settings -'
 
 module.exports = function (width) {
-  var size = width + 'x' + width
+  var size = width + 'x'
   // e.g gm convert -size 800x800 - -resize 800x800 -define jpeg:preserve-settings -
   var resize = dcp.spawn('gm', util.format(args, size, size).split(' '))
   return resize
