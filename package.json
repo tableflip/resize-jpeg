@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Resize your jpeg; preserve its quality",
   "main": "index.js",
-  "bin":{
+  "bin": {
     "resize-jpeg": "cli.js"
   },
   "scripts": {
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "duplex-child-process": "0.0.5",
+    "minimist": "^1.1.1",
     "mozjpeg-stream": "^1.0.1",
     "pumpify": "^1.3.3"
   }
